@@ -1,4 +1,4 @@
-/*
+  /*
   Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
@@ -21,8 +21,7 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
-
+const {color, make, model,year}=carDetails
 
 
 ////////// PROBLEM 2 //////////
@@ -35,6 +34,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+  const{firstName,lastName,title}=obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -55,6 +55,12 @@ function greeting( obj ) {
 
 //Code Here
 
+function totalPopulation(obj){
+  const {utah,california,texas,arizona} = obj;
+  return utah+california+texas+arizona
+}
+
+
 
 
 ////////// PROBLEM 4 //////////
@@ -68,7 +74,12 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function ingredients(obj){
+  const{carb,fat,protein}=obj;
+  let newArray=[]
+   newArray.push(carb,fat,protein);
+   return newArray
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -86,7 +97,9 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function largeNumbers({first,second,third}){
+  return Math.min(first,second,third)
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +111,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function numberGroups({a,b,c}){
+  if(Math.max(a.length,b.length,c.length)===a.length){
+    return a
+  } else if(Math.max(a.length,b.length,c.length)===b.length){
+    return b
+  } else return c
+}
 
